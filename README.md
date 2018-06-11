@@ -5,22 +5,24 @@ The AmondoSDK provides access to the Amondo Imprint database, and allows all of 
 
 ## Setup
 
-The first step to getting started is to make sure you have the [JitPack](https://jitpack.io) repositories included in the `build.gradle` file in the root of your project.
+The first step is to make sure you have the [JitPack](https://jitpack.io) repositories included in the `build.gradle` file in the root of your project.
 
 ```Groovy
-repositories {
-        jcenter()
-        maven { url "https://jitpack.io" }
+allprojects {
+        repositories {
+            ...
+            maven { url 'https://jitpack.io' }
+        }
 }
 ```
 
 Next add a dependency in the `build.gradle` file of your app module. The following will add a dependency to the full AmondoSDK library:
 
 ```Groovy
-implementation 'com.github.Amondo:AmondoSDK-Android:v1.0.0-beta'
+implementation 'com.github.Amondo:AmondoSDK-Android:1.0.0'
 ```
 
-The last step is to enable Java 1.8 compling if it isn't already enabled for your app. Add the followin in the `build.gradle` file of your app module:
+The last step is to enable Java 1.8 compiling if it isn't already enabled for your app. Add the following in the `build.gradle` file of your app module:
 
 ```Groovy
 compileOptions {
@@ -77,3 +79,7 @@ An Imprint is opened in a stand alone activity.
 AmondoSDK.openImprint(context, imprint);
 ```
 Once an imprint has been opened, all functionality is contained within that Activity, and it's children activities. When a user closes the imprint, activity is dismissed and removed from the activity stack.
+
+## Requirements
+
+Min supported Android version is 4.4.
