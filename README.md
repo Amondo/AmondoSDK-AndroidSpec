@@ -1,3 +1,5 @@
+[![](https://jitpack.io/v/Amondo/AmondoSDK-Android.svg)](https://jitpack.io/#Amondo/AmondoSDK-Android)
+
 # AmondoSDK
 The AmondoSDK provides access to the Amondo Imprint database, and allows all of the Imprint functionality to be used within your app, with one single ```openImprint``` method.
 
@@ -15,7 +17,7 @@ repositories {
 Next add a dependency in the `build.gradle` file of your app module. The following will add a dependency to the full AmondoSDK library:
 
 ```Groovy
-implementation 'com.github.Amondo.AmondoSdk-Android:1.0.0-beta'
+implementation 'com.github.Amondo:AmondoSDK-Android:v1.0.0-beta'
 ```
 
 The last step is to enable Java 1.8 compling if it isn't already enabled for your app. Add the followin in the `build.gradle` file of your app module:
@@ -34,7 +36,7 @@ compileOptions {
 To connect to the AmondoSDK, you need to call the `init` method, which (among other things) gets an access token from our servers, to authenticate your future requests. The initial SDK initialisation is done _asynchronously_.
 
 ```java
-AmondoSDK.init(contex, <YOUR_APP_ID>, <YOUR_SECRET_KEY>);
+AmondoSDK.init(context, <YOUR_APP_ID>, <YOUR_SECRET_KEY>);
 ```
 
 >The best place for calling `init` is in your `Application` class `onCreate` method.
