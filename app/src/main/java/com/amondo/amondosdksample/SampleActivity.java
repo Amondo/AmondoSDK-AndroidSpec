@@ -35,7 +35,7 @@ public class SampleActivity extends AppCompatActivity {
         recyclerView.setAdapter(adapter);
         AmondoSDK.getAllImprints(this, new GetImprintsCallback() {
             @Override
-            public void onImrintsLoaded(List<Imprint> imprints) {
+            public void onImprintsLoaded(List<Imprint> imprints) {
                 SampleActivity.this.imprints = imprints;
                 adapter.notifyDataSetChanged();
             }

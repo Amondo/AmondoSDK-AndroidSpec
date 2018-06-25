@@ -19,7 +19,7 @@ allprojects {
 Next add a dependency in the `build.gradle` file of your app module. The following will add a dependency to the full AmondoSDK library:
 
 ```Groovy
-implementation 'com.github.Amondo:AmondoSDK-Android:1.0.0'
+implementation 'com.github.Amondo:AmondoSDK-Android:1.0.1'
 ```
 
 The last step is to enable Java 1.8 compiling if it isn't already enabled for your app. Add the following in the `build.gradle` file of your app module:
@@ -59,7 +59,7 @@ To connect to the Amondo database, and load all Imprints associated with your ac
 AmondoSDK.getAllImprints(context, new GetImprintsCallback() {
 
         @Override
-        public void onImrintsLoaded(List<Imprint> imprints) {
+        public void onImprintsLoaded(List<Imprint> imprints) {
 
         }
 
