@@ -19,7 +19,7 @@ allprojects {
 Next add a dependency in the `build.gradle` file of your app module. The following will add a dependency to the full AmondoSDK library:
 
 ```Groovy
-implementation 'com.github.Amondo:AmondoSDK-Android:v1.1.0'
+implementation 'com.github.Amondo:AmondoSDK-Android:1.1.2'
 ```
 
 The last step is to enable Java 1.8 compiling if it isn't already enabled for your app. Add the following in the `build.gradle` file of your app module:
@@ -50,7 +50,7 @@ If you ever need to disconnect from the SDK, you can use:
 AmondoSDK.deinitialise()
 ```
 
-### Loading imprints
+### Loading Imprints
 
 To connect to the Amondo database, and load all Imprints associated with your account, use:
 
@@ -78,7 +78,7 @@ An Imprint is opened in a stand alone activity.
 ```java
 AmondoSDK.openImprint(context, imprint);
 ```
-Once an imprint has been opened, all functionality is contained within that Activity, and it's children activities. When a user closes the imprint, activity is dismissed and removed from the activity stack.
+Once an Imprint has been opened, all functionality is contained within that Activity, and it's children activities. When a user closes the Imprint, activity is dismissed and removed from the activity stack.
 
 
 ### Using light theme
