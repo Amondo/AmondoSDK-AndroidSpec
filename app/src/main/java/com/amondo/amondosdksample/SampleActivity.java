@@ -1,10 +1,10 @@
 package com.amondo.amondosdksample;
 
-import android.support.annotation.NonNull;
-import android.support.v7.app.AppCompatActivity;
+import androidx.annotation.NonNull;
+import androidx.appcompat.app.AppCompatActivity;
 import android.os.Bundle;
-import android.support.v7.widget.LinearLayoutManager;
-import android.support.v7.widget.RecyclerView;
+import androidx.recyclerview.widget.LinearLayoutManager;
+import androidx.recyclerview.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -15,7 +15,6 @@ import android.widget.Toast;
 import com.amondo.sdk.AmondoSDK;
 import com.amondo.sdk.entities.Imprint;
 import com.amondo.sdk.helpers.GetImprintsCallback;
-import com.amondo.sdk.preferences.PrefsManager;
 import com.bumptech.glide.Glide;
 
 import java.util.List;
@@ -33,7 +32,7 @@ public class SampleActivity extends AppCompatActivity {
         recyclerView.setLayoutManager(new LinearLayoutManager(this, LinearLayoutManager.HORIZONTAL, false));
         adapter = new ImprintsAdapter();
         recyclerView.setAdapter(adapter);
-        AmondoSDK.getAllImprints(this, new GetImprintsCallback() {
+        AmondoSDK.getImprints(this, 10, 0, new GetImprintsCallback() {
             @Override
             public void onImprintsLoaded(List<Imprint> imprints) {
                 SampleActivity.this.imprints = imprints;
