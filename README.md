@@ -19,7 +19,7 @@ allprojects {
 Next add a dependency in the `build.gradle` file of your app module. The following will add a dependency to the full AmondoSDK library:
 
 ```Groovy
-implementation 'com.github.Amondo:AmondoSDK-Android:1.4.0'
+implementation 'com.github.Amondo:AmondoSDK-Android:1.4.1'
 ```
 
 The last step is to enable Java 1.8 compiling if it isn't already enabled for your app. Add the following in the `build.gradle` file of your app module:
