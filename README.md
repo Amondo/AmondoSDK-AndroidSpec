@@ -19,7 +19,7 @@ allprojects {
 Next add a dependency in the `build.gradle` file of your app module. The following will add a dependency to the full AmondoSDK library:
 
 ```Groovy
-implementation 'com.github.Amondo:AmondoSDK-Android:1.4.1'
+implementation 'com.github.Amondo:AmondoSDK-Android:1.4.2'
 ```
 
 The last step is to enable Java 1.8 compiling if it isn't already enabled for your app. Add the following in the `build.gradle` file of your app module:
@@ -40,8 +40,6 @@ To connect to the AmondoSDK, you need to call the `init` method, which (among ot
 ```java
 AmondoSDK.init(context, <YOUR_APP_ID>, <YOUR_SECRET_KEY>);
 ```
-
->The best place for calling `init` is in your `Application` class `onCreate` method.
 
 
 If you ever need to disconnect from the SDK, you can use:
